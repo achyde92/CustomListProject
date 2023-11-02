@@ -25,7 +25,7 @@ namespace CustomList
         public void Add(T item)
         {
             //'item' parameter should be added to internal 'items' array
-
+            //items[]= item;
             //if items array is at capacity, double capacity and create new array
             if (items.Length == capacity)
             {

@@ -9,10 +9,11 @@ public class AddTest
     public void AddToCount_IncreaseCount_CountIncreasedByOne()
     {
         // Arrange
-        CustomList list = new CustomList();
-        // Act
+        CustomList<string> list = new CustomList<string>();
         
+        // Act
+        list.Add(count++);
         // Assert
-        Assert.AreEqual(1, CustomList.count);
+        Assert.AreEqual(1, List.count);
     }
 }

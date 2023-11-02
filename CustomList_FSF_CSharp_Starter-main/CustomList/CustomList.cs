@@ -18,7 +18,7 @@ namespace CustomList
         {
             capacity = 4;
             count = 0;
-            items = string[] itemsArray = new T[4];
+            items = new T[capacity];
         }
 
         //Member Methods (CAN DO)
@@ -26,6 +26,11 @@ namespace CustomList
         {
             //'item' parameter should be added to internal 'items' array
             //if items array is at capacity, double capacity and create new array
+            if (items = capacity)
+            {
+                capacity * 2;
+                items = new T[capacity];
+            }
             //transfer all items to new array
         }
 

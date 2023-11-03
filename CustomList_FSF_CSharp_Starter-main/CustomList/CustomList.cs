@@ -25,11 +25,13 @@ namespace CustomList
         public void Add(T item)
         {
             //'item' parameter should be added to internal 'items' array
-            //items[]= item;
+            items[count]= item;
+            count++;
             //if items array is at capacity, double capacity and create new array
             if (items.Length == capacity)
             {
                 capacity *= 2;
+                T[] TempArray = new T[capacity];
                 items = new T[capacity];
             }
             //transfer all items to new array

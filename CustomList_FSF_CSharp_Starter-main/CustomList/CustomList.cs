@@ -21,6 +21,18 @@ namespace CustomList
             items = new T[capacity];
         }
 
+        public T this[int index]
+        {
+            get
+            {
+                return items[index];
+            }
+            set
+            {
+                items[index] = value;
+            }
+        }
+
         //Member Methods (CAN DO)
         public void Add(T item)
         {
@@ -40,7 +52,13 @@ namespace CustomList
         public bool Remove(T item)
         {
             //If 'item' exists in the 'items' array, remove its first instance
+            if (items[] == item)
+            {
+                items.Remove(item);
+                count--;
+            }
             //Any items coming after the removed item should be shifted down so there is no empty index.
+
             //If 'item' was removed, return true. If no item was removed, return false.
             return false;
         }

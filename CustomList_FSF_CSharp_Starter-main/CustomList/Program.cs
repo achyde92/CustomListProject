@@ -4,12 +4,13 @@
     {
         static void Main(string[] args)
         {
-            List<int> list = new List<int>();
-            list.Add(7);
-            list.Add(8);
-            list[0] = 32;
+            CustomList<string> list = new CustomList<string>();
+            list.Add("thing");
+            list.Add("thing 2");
+            list.Add("animal");
+            list.Add("stuff");
 
-            Add(T item)
+            list.Remove("thing");
         }
     }
 }

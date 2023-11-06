@@ -40,27 +40,43 @@ namespace CustomList
             items[count]= item;
             count++;
             //if items array is at capacity, double capacity and create new array
-            if (items.Length == capacity)
+            //transfer all items to new array
+
+            if (count == capacity)
             {
                 capacity *= 2;
                 T[] TempArray = new T[capacity];
-                items = new T[capacity];
+                for (int i = 0; i < count; i++)
+                {
+                    TempArray[i] = items[i];
+                }
+                items = TempArray;
             }
-            //transfer all items to new array
         }
 
         public bool Remove(T item)
         {
             //If 'item' exists in the 'items' array, remove its first instance
-            if (items[] == item)
+            if (items.Contains(item))
             {
-                items.Remove(item);
+                T[] TempArray = new T[capacity];
+                for (int i = 1; i < count; i++)
+                {
+                    TempArray[i - 1] = items[i];
+                }
                 count--;
+                items = TempArray;
+                return true;
             }
+            else
+            {
+                return false;
+            }
+            
             //Any items coming after the removed item should be shifted down so there is no empty index.
 
             //If 'item' was removed, return true. If no item was removed, return false.
-            return false;
+            
         }
 
         public override string ToString()

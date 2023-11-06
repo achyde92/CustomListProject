@@ -25,12 +25,29 @@ namespace CustomList
         {
             get
             {
+                if (index < 0 || index >= items.Length)
+                {
+                    throw new IndexOutOfRangeException("Index is out of bounds");
+                }
                 return items[index];
             }
             set
             {
+                if (index < 0 || index >= items.Length)
+                {
+                    throw new IndexOutOfRangeException("Index is out of bounds");
+                }
                 items[index] = value;
             }
+
+        }
+        public int Count
+        {
+            get { return count; }
+        }
+        public int Capacity
+        {
+            get { return capacity; }
         }
 
         //Member Methods (CAN DO)
@@ -81,14 +98,23 @@ namespace CustomList
 
         public override string ToString()
         {
-            //returns a single string that contains all items from array
-            return "";
+            //returns a single string that contains all items from arra
+
+            string result = string.Join(",", items);
+            Console.WriteLine(result);
+            return result;
+
+
         }
 
         public static CustomList<T> operator +(CustomList<T> firstList, CustomList<T> secondList)
         {
             //returns a single CustomList<T> that contains all items from firstList and all items from secondList 
-            return null;
+
+            CustomList<T> result = new CustomList<T>();
+            CustomList<T>() 
+           
+            
         }
 
         public static CustomList<T> operator -(CustomList<T> firstList, CustomList<T> secondList)

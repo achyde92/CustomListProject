@@ -14,7 +14,7 @@ public class AddTest
         // Act
         list.Add(itemToAdd);
         // Assert
-        Assert.AreEqual(1, list.count);
+        Assert.AreEqual(1, list.Count);
     }
 
     [TestMethod]
@@ -49,7 +49,7 @@ public class AddTest
         // Act
         list.Add(itemToAdd);
         // Assert
-        Assert.AreEqual(, list.capacity);
+        Assert.AreEqual(, list.Capacity);
     }
     [TestMethod]
     public void AddOldItemToNewArray_CarryOverItem_OldItemNewArray()
@@ -60,7 +60,7 @@ public class AddTest
         // Act
         list.Add(itemToAdd);
         // Assert
-        Assert.AreEqual(1, list.count);
+        Assert.AreEqual(1, list.Count);
     }
 
 

@@ -22,11 +22,11 @@ namespace CustomListTest
         {
             // Arrange
             CustomList<string> list = new CustomList<string>();
-            string itemToRemove = "Thing";
+            string itemToRemove = "thing";
             // Act
             list.Remove(itemToRemove);
             // Assert
-            Assert.AreEqual(true, list.Remove);
+            Assert.AreEqual(true, list.Remove("thing"));
         }
         [TestMethod]
         public void Remove_ItemNotInCustomList_CountStaysTheSame()
@@ -40,7 +40,7 @@ namespace CustomListTest
             Assert.AreEqual(1, list.count);
         }
         [TestMethod]
-        public void RemoveFromCount_()
+        public void Remove_ShiftBackwards_FillIndexOfRemovedItem()
         {
             // Arrange
             CustomList<string> list = new CustomList<string>();
@@ -51,7 +51,7 @@ namespace CustomListTest
             Assert.AreEqual(1, list.count);
         }
         [TestMethod]
-        public void RemoveFromCount_()
+        public void Remove_SameNamedItems_RemoveOnlyOneOfSameNamedItems()
         {
             // Arrange
             CustomList<string> list = new CustomList<string>();

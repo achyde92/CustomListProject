@@ -111,8 +111,8 @@ namespace CustomList
         {
             //returns a single CustomList<T> that contains all items from firstList and all items from secondList 
 
-            CustomList<T> result = new CustomList<T>();
-            CustomList<T>() 
+            string CombineList = firstList.items + secondList.items;
+            return new CustomList<T>();
            
             
         }
